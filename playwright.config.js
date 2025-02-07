@@ -11,6 +11,7 @@ const config = {
     ],
     use: {
         baseURL: CONFIG.baseUrl,
+        headless: CONFIG.browserOptions.headless,
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
         trace: 'retain-on-failure',
@@ -43,5 +44,4 @@ const config = {
     ],
 };
 
-// Export the config object
 export default config;

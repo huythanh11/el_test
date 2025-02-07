@@ -4,11 +4,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test:e2e": "playwright test tests/e2e",
-    "test:env": "ENV=dev npx playwright test tests/e2e",
-    "report": "npx allure generate ./allure-results --clean && npx allure open",
-    "test:ci": "cross-env ENV=ci playwright test:e2e"
-
+    "test": "playwright test",
+    "test:e2e": "HEADLESS=true playwright test tests/e2e",
+    "test:env": "cross-env ENV=dev npx playwright test tests/e2e",
+    "report": "npx allure generate ./allure-results --clean && npx allure open"
   },
   "keywords": [],
   "author": "",
