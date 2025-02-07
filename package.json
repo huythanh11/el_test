@@ -1,0 +1,27 @@
+{
+  "name": "uiplaywright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test:e2e": "playwright test tests/e2e",
+    "test:env": "ENV=dev npx playwright test tests/e2e",
+    "report": "npx allure generate ./allure-results --clean && npx allure open",
+    "test:ci": "cross-env ENV=ci playwright test"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0",
+    "@playwright/test": "^1.50.1",
+    "allure-commandline": "^2.32.2",
+    "allure-playwright": "^3.1.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.19.0",
+    "prettier": "^3.4.2"
+  }
+}
