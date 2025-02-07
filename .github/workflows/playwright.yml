@@ -28,7 +28,7 @@ jobs:
     - name: Run Playwright tests
       run: npm run test:e2e
       env:
-        ENV: ci
+        ENV: dev
         
     - uses: actions/upload-artifact@v4
       if: always()
